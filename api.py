@@ -36,13 +36,13 @@ def customer_predict_score(id_client:int):
 @app.get('/get-DataframeIndexes')
 def dataframe_indexes():
     """ Dataframe index"""
-    return data_test.index.tolist() 
+    return data.index.tolist() 
 
 # Dataframe columns
 @app.get('/get-TestDataframeColumns')
 def dataframe_test_columns():
     """ Dataframe columns"""
-    return data_test.columns.tolist() 
+    return data.columns.tolist() 
 # Dataframe columns
 @app.get('/get-DataframeInitailColumns')
 def dataframe_initial_columns():
