@@ -44,7 +44,7 @@ def dataframe_test_columns():
     """ Dataframe columns"""
     return data.columns.tolist() 
 # Dataframe columns
-@app.get('/get-DataframeInitailColumns')
+@app.get('/get-DataframeInitialColumns')
 def dataframe_initial_columns():
     """ Dataframe columns"""
     return data_initial.columns.tolist() 
