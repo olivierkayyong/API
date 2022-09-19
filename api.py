@@ -47,7 +47,7 @@ def dataframe_test_columns():
 @app.get('/get-DataframeInitialColumns')
 def dataframe_initial_columns():
     """ Dataframe columns"""
-    return data_initial.columns.tolist() 
+    return df_initial.columns.tolist() 
 
 # Interpretability of the model:Local feature importance
 @app.get('/get-LocalFeatureImportance')
