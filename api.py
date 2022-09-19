@@ -14,7 +14,7 @@ def welcome():
     return {'message':"Hello welcome to the customer prediction"}
 
 # Customer prediction
-@app.get('/predict')
+@app.get('/CustomerPrediction')
 def customer_predict(id_client:int):
     """ Customer creditworthiness prediction. 
     Args:
@@ -27,25 +27,25 @@ def customer_predict(id_client:int):
     return {'Prediction': prediction}
 
 # Customer predict_proba_score
-@app.get('/get-Score')
+@app.get('/get-CustomerPredictScore')
 def score(id_client:int):
     score = predict_proba(id_client) 
     return {'Predict_proba score': score.tolist() }
 
 # Dataframe indexes
-@app.get('/get-Indexes')
-def indexes():
+@app.get('/get-DataframeIndexes')
+def dataframe_indexes():
     """ Dataframe index"""
     return data.index.tolist() 
 
 # Dataframe columns
-@app.get('/get-Columns')
-def columns():
+@app.get('/get-TestDataframeColumns')
+def dataframe_test_columns():
     """ Dataframe columns"""
     return data.columns.tolist() 
 # Dataframe columns
-@app.get('/get-Columns2')
-def columns():
+@app.get('/get-DataframeInitailColumns')
+def dataframe_initial_columns():
     """ Dataframe columns"""
     return df_2.columns.tolist() 
 
