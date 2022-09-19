@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix
 
 # Loading data & Model
 data = pd.read_csv("x_data.csv")
-data_initial = pd.read_csv("x_data_2.csv")
+df_initial = pd.read_csv("x_data_2.csv")
 y_test = pd.read_csv("y_data.csv")
 pickle_in = open("lgbm.pkl", "rb")
 classifier = pickle.load(pickle_in)
@@ -105,7 +105,7 @@ def data_test():
 # Initial data
 def data_initial():
     """Loading test data"""
-    x = data_initial.to_string(header=False,
+    x = df_initial.to_string(header=False,
                   index=False,
                   index_names=False).split('\n')
     vals = [','.join(ele.split()) for ele in x]
