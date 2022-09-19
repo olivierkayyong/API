@@ -7,8 +7,8 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.metrics import confusion_matrix
 
 # Loading data & Model
-data = pd.read_csv("x_data.csv")
-df_2 = pd.read_csv("x_data_2.csv")
+data_test = pd.read_csv("x_data.csv")
+data_initial = pd.read_csv("x_data_2.csv")
 y_test = pd.read_csv("y_data.csv")
 pickle_in = open("lgbm.pkl", "rb")
 classifier = pickle.load(pickle_in)
@@ -94,7 +94,7 @@ def conf_mat():
     return cf_matrix
 
 # Test data
-def test_data():
+def data_test():
     """Loading test data"""
     x = data.to_string(header=False,
                   index=False,
@@ -102,8 +102,8 @@ def test_data():
     vals = [','.join(ele.split()) for ele in x]
     return vals
 
-# Test data_2
-def test_data_2():
+# Initial data
+def data_initial():
     """Loading test data"""
     x = df_2.to_string(header=False,
                   index=False,
