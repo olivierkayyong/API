@@ -28,7 +28,7 @@ def customer_predict(id_client:int):
 
 # Customer predict_proba_score
 @app.get('/get-CustomerPredictionScore')
-def score(id_client:int):
+def customer_predict_score(id_client:int):
     score = predict_proba(id_client) 
     return {'Predict_proba score': score.tolist() }
 
@@ -98,13 +98,13 @@ def confusion_mat():
 
 # Test data
 @app.get('/get-TestData')
-def data_test():
+def test_data():
     """Loading test data"""
-    return test_data()
+    return data_test()
 
-# Test data_2
-@app.get('/get-TestData2')
-def data_test_2():
+# Initial data
+@app.get('/get-InitialData')
+def initial_data():
     """Loading test data"""
-    return test_data_2()
+    return data_initial()
 # uvicorn api:app --reload
