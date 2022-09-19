@@ -14,7 +14,7 @@ def welcome():
     return {'message':"Hello welcome to the customer prediction"}
 
 # Customer prediction
-@app.get('/CustomerPrediction')
+@app.get('/get-CustomerPrediction')
 def customer_predict(id_client:int):
     """ Customer creditworthiness prediction. 
     Args:
@@ -27,7 +27,7 @@ def customer_predict(id_client:int):
     return {'Prediction': prediction}
 
 # Customer predict_proba_score
-@app.get('/get-CustomerPredictScore')
+@app.get('/get-CustomerPredictionScore')
 def score(id_client:int):
     score = predict_proba(id_client) 
     return {'Predict_proba score': score.tolist() }
