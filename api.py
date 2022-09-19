@@ -36,18 +36,18 @@ def customer_predict_score(id_client:int):
 @app.get('/get-DataframeIndexes')
 def dataframe_indexes():
     """ Dataframe index"""
-    return data.index.tolist() 
+    return data_test.index.tolist() 
 
 # Dataframe columns
 @app.get('/get-TestDataframeColumns')
 def dataframe_test_columns():
     """ Dataframe columns"""
-    return data.columns.tolist() 
+    return data_test.columns.tolist() 
 # Dataframe columns
 @app.get('/get-DataframeInitailColumns')
 def dataframe_initial_columns():
     """ Dataframe columns"""
-    return df_2.columns.tolist() 
+    return data_initial.columns.tolist() 
 
 # Interpretability of the model:Local feature importance
 @app.get('/get-LocalFeatureImportance')
